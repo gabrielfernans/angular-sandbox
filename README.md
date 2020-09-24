@@ -1,1 +1,1 @@
-# angular-sandbox
+# dual-theme-angular
