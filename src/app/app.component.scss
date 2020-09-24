@@ -1,0 +1,50 @@
+@import "../styles.scss";
+
+// HA - Header Area
+// PA - Pages Area
+// MA - Menu Area
+// LA - Lateral Area
+// FA - Footer Area
+
+.container {
+  display: grid;
+
+  grid-template-columns: 15% auto 10%;
+  grid-template-rows: 10% auto 5%;
+  grid-template-areas:
+    "HA HA HA"
+    "MA PA LA"
+    "MA FA FA";
+
+  height: 100%;
+  max-width: 1980px;
+
+  background-color: $gray;
+}
+
+.header-container {
+}
+
+.menu-container {
+  grid-area: MA;
+  display: flex;
+  flex-direction: column;
+
+  max-height: 100vh;
+  overflow-y: scroll;
+
+  align-items: flex-end;
+
+  background-color: $blue;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.pages-container {
+  grid-area: PA;
+
+  max-height: 100vh;
+  overflow-y: scroll;
+}
