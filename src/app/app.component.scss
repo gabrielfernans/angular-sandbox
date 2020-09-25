@@ -5,37 +5,41 @@
 // MA - Menu Area
 // LA - Lateral Area
 // FA - Footer Area
-
 .container {
   display: grid;
 
   grid-template-columns: 15% auto 10%;
-  grid-template-rows: 10% auto 5%;
+  grid-template-rows: 100px auto 5%;
   grid-template-areas:
     "HA HA HA"
     "MA PA LA"
-    "MA FA FA";
+    "FA FA FA";
 
   height: 100%;
   max-width: 1980px;
 
-  background-color: $gray;
+  background-color: $black;
 }
 
 .header-container {
+  grid-area: HA;
+  display: flex;
+  align-items: center;
+
+  margin: 21px 42px;
+
+  border-bottom: solid 1.8px $gray;
 }
 
 .menu-container {
   grid-area: MA;
   display: flex;
-  flex-direction: column;
 
+  height: 100%;
   max-height: 100vh;
   overflow-y: scroll;
 
-  align-items: flex-end;
-
-  background-color: $blue;
+  border-right: solid 1px $gray;
 
   &::-webkit-scrollbar {
     display: none;
