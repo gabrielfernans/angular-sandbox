@@ -10,12 +10,21 @@
   color: $gray;
   font-size: 26px;
 
+  & img:hover {
+    cursor: pointer;
+  }
+
   & .user-area {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     width: 85px;
+  }
+
+  & fa-icon:hover {
+    cursor: pointer;
+    color: $gray-secondary;
   }
 }
 
@@ -28,4 +37,8 @@
   background-image: url("../../../assets/personal.jpg");
   background-size: cover;
   background-color: $gray;
+}
+
+.user-icon:hover {
+  cursor: pointer;
 }
